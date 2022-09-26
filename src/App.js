@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import Article from "./components/Article";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="blog">
+      <Article title="Mon premier article" date={new Date().toDateString()} author="Pascal Vaccaro">
+        Un texte tout simple
+      </Article>
+      <Article title="Mon deuxième article" date="12/09/22" author="Raphael Vaccaro">
+        <div>
+          <h2>Le sous-titre</h2>
+          <p>La description</p>
+
+          <p>Le contenu</p>
+        </div>
+      </Article>
+    </section>
   );
 }
 
